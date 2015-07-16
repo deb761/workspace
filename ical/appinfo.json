@@ -1,0 +1,9 @@
+{
+	"id": "com.debbie.ical",
+	"version": "1.0.0",
+	"vendor": "Deborah Engelmeyer",
+	"type": "web",
+	"main": "index.html",
+	"title": "ical",
+	"icon": "icon.png"
+}

@@ -1,0 +1,10 @@
+/* This class defines a vertex on the graph */
+public class Vertex
+{
+
+	public Vertex()
+	{
+		// TODO Auto-generated constructor stub
+	}
+
+}

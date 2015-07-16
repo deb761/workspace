@@ -1,0 +1,98 @@
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Scanner;
+
+/**
+ * A grid consisting of vertices and edges
+ */
+
+/**
+ * @author deb
+ *
+ */
+public class Grid
+{
+	// An ArrayList of the vertices, with vertex 1 at index 1, so that
+	// index 0 is empty, and the length of the ArrayList is the number
+	// of vertices + 1.
+	ArrayList<Vertex> vertices;
+	// An ArrayList of the vertices.  Since vertices don't have an index
+	// associated with them, we will use the whole ArrayList.
+	ArrayList<Edge> edges;
+
+	public ArrayList<Vertex> getVertices()
+	{
+		return vertices;
+	}
+	public void setVertices(ArrayList<Vertex> vertices)
+	{
+		this.vertices = vertices;
+	}
+	public ArrayList<Edge> getEdges()
+	{
+		return edges;
+	}
+	public void setEdges(ArrayList<Edge> edges)
+	{
+		this.edges = edges;
+	}
+	public int getN() { return vertices.size(); }
+	/**
+	 * Create the Grid object from a file
+	 */
+	public Grid(String path) throws IOException
+	{
+		BufferedReader br = new BufferedReader(new FileReader(path));
+		String line;
+		while ((line = br.readLine()) != null)
+		{
+			Scanner scanner = new Scanner(line);
+			int id1 = scanner.nextInt();
+			
+			// Add this vertex to the array if it is not already there
+			Vertex v1 = addVertex(id1);
+			while (scanner.hasNextInt())
+			{
+				int id2 = scanner.nextInt();
+				Vertex v2 = addVertex(id2);
+				// add the edge
+				Edge edge = addEdge(v1, v2);
+				v1.getEdges().add(edge);
+			}
+			scanner.close();
+		}
+		br.close();
+	}
+	private Vertex addVertex(int id1)
+	{
+		Vertex vertex = null;
+		if (vertices.get(id1) == null)
+		{
+			vertex = new Vertex(id1);
+			vertices.ensureCapacity(id1);
+			vertices.set(id1, vertex);
+		}
+		else
+			vertex = vertices.get(id1);
+		
+		return vertex;
+	}
+	private Edge addEdge(Vertex v1, Vertex v2)
+	{
+		Edge edge = null;
+		if (v1.getId() < v2.getId())
+			edge = new Edge(v1, v2);
+		else
+			for (Edge edg : edges)
+			{
+				if ((edge.getV1() == v2) && (edge.getV2() == v1))
+				{
+					edge = edg;
+					break;
+				}
+			}
+		return edge;
+	}
+}

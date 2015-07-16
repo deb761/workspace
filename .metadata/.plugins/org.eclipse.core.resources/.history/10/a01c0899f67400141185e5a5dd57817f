@@ -1,0 +1,12 @@
+package Sort;
+
+public class Sort
+{
+	public static int main(String[] args)
+	{
+
+	}
+	public static void print()
+	{}
+	
+}

@@ -1,0 +1,19 @@
+/**
+ * A grid consisting of vertices and edges
+ */
+
+/**
+ * @author deb
+ *
+ */
+public class Grid
+{
+
+	/**
+	 * 
+	 */
+	public Grid() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

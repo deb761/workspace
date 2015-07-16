@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="com.palm.pdt.ui.launch.type">
+<stringAttribute key="PROJECT" value="ical"/>
+<booleanAttribute key="com.palm.pdt.launch.inspect" value="false"/>
+<booleanAttribute key="com.palm.pdt.launch.mojoDebug" value="true"/>
+<stringAttribute key="com.palm.pdt.targetId" value="emulator"/>
+</launchConfiguration>

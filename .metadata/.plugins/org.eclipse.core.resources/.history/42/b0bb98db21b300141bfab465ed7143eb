@@ -1,0 +1,20 @@
+/**
+ * 
+ */
+
+/**
+ * @author deb
+ *
+ */
+public class MinCut
+{
+
+	/**
+	 * 
+	 */
+	public MinCut()
+	{
+		// TODO Auto-generated constructor stub
+	}
+
+}

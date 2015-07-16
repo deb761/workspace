@@ -1,0 +1,13 @@
+1428027364251	Rename type 'Scheduler'
+1428027776265	Rename type 'SchedulerP'
+1428076414706	Rename local variable 'v2'
+1428077055065	Rename type 'TestDijkstra'
+1428077579799	Rename type 'SchedulerM'
+1428077612542	Rename method 'Schedule'
+1428077621772	Rename method 'ScheduleDiff'
+1428079309642	Delete element
+1428081141750	Rename local variable 'edges'
+1428113091917	Extract method 'updateHeap'
+1428113616685	Extract method 'setDist2minEdge'
+1428114649456	Rename local variable 'sched'
+1428118303801	Extract method 'updateDist'

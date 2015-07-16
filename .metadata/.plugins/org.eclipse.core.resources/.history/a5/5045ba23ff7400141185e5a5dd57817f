@@ -1,0 +1,17 @@
+package Sort;
+import junit;
+
+public class TestSort {
+
+	public static void main(String[] args)
+	{
+		testSort();
+	}
+	public static void testSort()
+	{
+		String[] input = new String[]{"banana", "is", "our", "god"};
+		String[] expected = new String[]{"banana", "god", "is", "our"};
+		Sort.sort(input);
+		junit.framework.Assert.assertArrayEquals(expected, input);
+	}
+}

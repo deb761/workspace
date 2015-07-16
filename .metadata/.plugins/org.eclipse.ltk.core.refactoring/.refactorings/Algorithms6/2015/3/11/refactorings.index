@@ -1,0 +1,5 @@
+1425790586673	Extract method 'setBasics'
+1425790689534	Rename field 'a'
+1425793852704	Extract method 'checkAs'
+1425795145629	Rename method 'checkAs'
+1425795172892	Rename local variable 'set1a'
